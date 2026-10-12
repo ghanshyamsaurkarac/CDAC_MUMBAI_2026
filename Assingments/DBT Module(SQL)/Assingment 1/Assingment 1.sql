@@ -117,8 +117,4 @@ on b.book_id=br.book_id
 where borrow_date is null;
 
 
-
-
-
-
   
