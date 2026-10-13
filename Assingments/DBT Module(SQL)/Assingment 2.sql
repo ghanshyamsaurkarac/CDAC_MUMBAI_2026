@@ -73,7 +73,7 @@ update employee set emp_id=113 where emp_id=110;
 rollback to s1;
 
 -- 12. Write a query to truncate all data from the Emp table.
-truncate employee;
+Truncate employee;
 
 
 
