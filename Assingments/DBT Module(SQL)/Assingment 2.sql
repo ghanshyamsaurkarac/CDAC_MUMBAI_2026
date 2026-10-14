@@ -75,5 +75,40 @@ rollback to s1;
 -- 12. Write a query to truncate all data from the Emp table.
 Truncate employee;
 
+-- 13. Write a query to list all employees whose salary is greater than 50,000.
+select * from employee; 
+select emp_id,emp_name,salary from employee
+where salary>50000;
 
+-- 14. Write a query to increase the salary of all employees in DeptID = 10 by 10%.
+update employee set salary=salary+(salary*0.10) -- i used dept_id=3(their is no dept_id=10 present in my table)
+where dept_id=3;
+
+-- 15. Write a query to count the total number of employees in each department.
+select dept_id,count(emp_id) from employee 
+group by dept_id;
+
+-- 16. Write a query to list departments that have no employees.
+-- & create a view for those salespeople who belong to the city of Mumbai. 
+select emp_name,dept_id from employee as d
+where not exists (select dept_id from employee e
+where d.dept_id=e.dept_id);
+
+-- 17. Write a query to display the highest salary among all employees.
+select max(salary) from employee;
+
+-- 18. Write a query to display the 2nd highest salary among all employees.
+select distinct(salary) from employee  -- using limit and offset
+order by salary desc 
+limit 1 offset 1;
+
+select max(salary) from employee
+where salary <(select max(salary) from employee); -- using subquery
+
+-- 19. Write a query to show all employees ordered by JoiningDate in descending order.
+select emp_id,emp_name,joining_date from employee 
+order by joining_date desc;
+
+-- 20. Write a query to rename the DeptName column to DepartmentName.
+alter table department rename column Dept_name to DepartmentName;
 
