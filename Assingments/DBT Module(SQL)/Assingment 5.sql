@@ -23,6 +23,8 @@ end if;
 end //
 delimiter ; 
 call check_even_odd(7);
+
+
  
 -- Q2. Calculate Simple Interest  
 -- Create a stored procedure calculate_interest that accepts principal amount, rate of interest, and time in years 
@@ -46,6 +48,9 @@ delimiter ;
 drop procedure calculate_interest;
  call calculate_interest(10000,5,2);
  CALL calculate_interest(25000, 7, 3); 
+
+
+
  
 --  Q3. Calculate Grade  
 -- Create a stored procedure calculate_grade that accepts student ID, student name, and marks and displays the student
@@ -89,7 +94,8 @@ delimiter ;
 CALL calculate_grade(101, 'Amit', 92); 
 CALL calculate_grade(102, 'Priya', 72); 
 CALL calculate_grade(103, 'Rahul', 45); 
- 
+
+
  
 --  Q4. Calculate Employee Bonus   
 -- Create a stored procedure calculate_bonus that accepts employee name and salary and calculates the bonus 
@@ -140,6 +146,8 @@ CALL calculate_bonus('Priya', 65000);
 CALL calculate_bonus('Rahul', 25000); 
 
 
+
+
 -- Q5. Find Maximum of Three Numbers — 
 -- Create a stored procedure find_maximum that accepts three integers and displays the largest number. 
 -- Test cases: 
@@ -167,6 +175,8 @@ drop procedure find_maximum;
 CALL find_maximum(25, 78, 45); 
 CALL find_maximum(100, 50, 75); 
 CALL find_maximum(30, 30, 20); 
+
+
 
 
 -- Q6. Employee Salary Analysis  
@@ -216,6 +226,8 @@ delimiter ;
 CALL salary_analysis('Amit', 120000); 
 CALL salary_analysis('Priya', 60000); 
 CALL salary_analysis('Rahul', 35000); 
+
+
 
 
 -- Q7. Electricity Bill Calculation  
